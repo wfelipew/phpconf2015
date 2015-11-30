@@ -50,12 +50,26 @@ return array(
                     ),
                 ),
             ),
+            'api' => array(
+                'type' => 'Segment',
+                'options' => array(
+                    'route' => '/api/[:controller][/[:id]]',
+                    'defaults' => array(
+                        '__NAMESPACE__' => 'Application\Controller',
+                    )
+                
+                ),
+                
+            ),
         ),
     ),
     'service_manager' => array(
         'abstract_factories' => array(
             'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
             'Zend\Log\LoggerAbstractServiceFactory',
+        ),
+        'factories' => array(
+            'CartModel' => 'Application\Service\Factory\CartModelFactory'
         ),
         'aliases' => array(
             'translator' => 'MvcTranslator',
@@ -73,7 +87,8 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Application\Controller\Index' => 'Application\Controller\IndexController'
+            'Application\Controller\Index' => 'Application\Controller\IndexController',
+            'Application\Controller\Cart'  => 'Application\Controller\CartController',
         ),
     ),
     'view_manager' => array(
@@ -91,6 +106,9 @@ return array(
         'template_path_stack' => array(
             __DIR__ . '/../view',
         ),
+        'strategies' => array(
+            'ViewJsonStrategy'
+        )
     ),
     // Placeholder for console routes
     'console' => array(
