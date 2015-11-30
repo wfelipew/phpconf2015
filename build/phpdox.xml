@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpdox xmlns="http://xml.phpdox.net/config">
+ <project name="phpconf2015" source="." workdir="build/phpdox">
+  <collector publiconly="false">
+   <include mask="*.php" />
+   <exclude mask="*Autoload.php" />
+   <exclude mask="**vendor**" />
+   <exclude mask="**scripts**" />
+   <exclude mask="**build**" />
+   <exclude mask="**tests**" />
+  </collector>
+
+  <generator output="build">
+   <build engine="html" enabled="true" output="api"/>
+  </generator>
+ </project>
+</phpdox>
