@@ -4,7 +4,7 @@
 	<target name="build-local" depends="prepare,lint,package,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpdox,phpcb,composer,codeception" />
 	<target name="build-develop" depends="prepare,lint,package,deploy-dev,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpdox,phpcb,composer,codeception" />
 	<target name="build-homolog" depends="prepare,lint,package,deploy-homolog,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpdox,phpcb,composer,codeception-homolog" />
-	<target name="build-master" depends="prepare,lint,phpmd-ci,phpcs-ci,phpdox,package,deploy-prod" />
+	<target name="build-master" depends="prepare,lint,package,deploy-prod" />
 
 
 
@@ -178,7 +178,7 @@
 		<exec executable="zs-client.phar" failonerror="true">
 			<arg value="installApp" />
 			<arg value="--zpk=${basedir}/application.zpk" />
-			<arg value="--target=aws-prod" />
+			<arg value="--target=zend-local" />
 			<arg value="--baseUri='http://phpconf2015-prod.local/'" />
 			<arg value="--userAppName=phpconf2015-prod" />
 		</exec>
