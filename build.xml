@@ -226,8 +226,8 @@
 	</target>
 	
 	<target name="codeception-homolog">
-			<exec executable="php" failonerror="true">
-				<arg line="codecept.phar run --env homolog --steps --xml --html" />
+			<exec executable="codecept.phar" failonerror="true">
+				<arg line=" run --env homolog --steps --xml --html" />
 			</exec>
 	</target>
 
