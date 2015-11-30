@@ -227,7 +227,7 @@
 	
 	<target name="codeception-homolog">
 			<exec executable="codecept.phar" failonerror="true">
-				<arg line=" run --env homolog --steps --xml --html" />
+				<arg line=" run --config=src/codeception.yml --env homolog --steps --xml --html" />
 			</exec>
 	</target>
 
