@@ -4,3 +4,37 @@ modules:
         - REST:
              url: http://phpconf2015.local/
              depends: PhpBrowser
+env:
+    local:
+      modules:
+        config:
+          PhpBrowser:
+            url: http://phpconf2015.local/
+            curl:
+              CURLOPT_TIMEOUT: 600
+            connect_timeout: 600
+            timeout: 600
+          REST:
+            url: http://phpconf2015.local/
+    dev:
+      modules:
+        config:
+          PhpBrowser:
+            url: http://phpconf2015-dev.local/
+            curl:
+              CURLOPT_TIMEOUT: 600
+            connect_timeout: 600
+            timeout: 600
+          REST:
+            url: http://phpconf2015-dev.local/
+    homolog:
+      modules:
+        config:
+          PhpBrowser:
+            url: http://phpconf2015-homolog.local/
+            curl:
+              CURLOPT_TIMEOUT: 600
+            connect_timeout: 600
+            timeout: 600
+          REST:
+            url: http://phpconf2015-homolog.local/
