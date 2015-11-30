@@ -11,7 +11,7 @@
   </collector>
 
   <generator output="build">
-   <build engine="html" enabled="true" output="html"/>
+   <build engine="html" enabled="true" output="api"/>
   </generator>
  </project>
 </phpdox>

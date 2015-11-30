@@ -167,9 +167,9 @@
 		<exec executable="zs-client.phar" failonerror="true">
 			<arg value="installApp" />
 			<arg value="--zpk=${basedir}/application.zpk" />
-			<arg value="--target=cr4-ci" />
-			<arg value="--baseUri='http://testme-backend-dev.4linux.com.br/'" />
-			<arg value="--userAppName=testme-backend-dev" />
+			<arg value="--target=zend-local" />
+			<arg value="--baseUri='http://phpconf2015-dev.local/'" />
+			<arg value="--userAppName=phpconf2015-dev" />
 		</exec>
 	</target>
 
