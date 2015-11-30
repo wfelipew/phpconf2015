@@ -179,8 +179,8 @@
 			<arg value="installApp" />
 			<arg value="--zpk=${basedir}/application.zpk" />
 			<arg value="--target=aws-prod" />
-			<arg value="--baseUri='http://api.rankdone.com/'" />
-			<arg value="--userAppName=rankdone-backend" />
+			<arg value="--baseUri='http://phpconf2015-prod.local/'" />
+			<arg value="--userAppName=phpconf2015-prod" />
 		</exec>
 	</target>
 	
@@ -188,9 +188,9 @@
 			<exec executable="zs-client.phar" failonerror="true">
 				<arg value="installApp" />
 				<arg value="--zpk=${basedir}/application.zpk" />
-				<arg value="--target=aws-homolog" />
-				<arg value="--baseUri='http://api-homolog.rankdone.com/'" />
-				<arg value="--userAppName=rankdone-backend-homolog" />
+				<arg value="--target=zend-local" />
+				<arg value="--baseUri='http://phpconf2015-homolog.local/'" />
+				<arg value="--userAppName=phpconf2015-homolog" />
 			</exec>
 	</target>
 
